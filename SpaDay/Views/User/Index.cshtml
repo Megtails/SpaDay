@@ -1,5 +1,26 @@
-﻿<h1> Welcome to the spa, @ViewBag.user!</h1>
-
+﻿<h1>Welcome to the spa, @ViewBag.user.Name!</h1>
 <p>
-    <a asp-controller="Spa" asp-action="Index">Spa Specialites</a>
+    <a asp-controller="spa" asp-action="Index">Spa Specialties</a>
 </p>
+<div>
+    <label for="userDetails">User Details:</label>
+    <table name="userDetails">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                E-Mail
+            </th>
+            <th>
+                Date Joined
+            </th>
+        </tr>
+            <tr>
+                <td>@ViewBag.user.Name</td>
+                <td>@ViewBag.user.Email</td>
+                <td>@ViewBag.user.Date.ToShortDateString()</td>
+                <td></td>
+            </tr>
+    </table>
+</div>

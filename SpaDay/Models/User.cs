@@ -4,19 +4,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace SpaDay.Models
 {
-    [BindProperties]
+
     public class User
     {
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public int Id { get; }
-        private static int nextID = 1;
+        public DateTime Date { get; }
 
         public User()
         {
-            Id = nextID;
-            nextID++;
+            Date = DateTime.Today;
         }
 
         public User(string name, string email, string password): this()
@@ -26,5 +24,7 @@ namespace SpaDay.Models
             Password = password;
         }
 
+
     }
+
 }
