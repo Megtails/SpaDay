@@ -5,6 +5,7 @@ namespace SpaDay.ViewModels
 {
     public class AddUserViewModel
     {
+        //Make sure username exists and is between 5-15 chx
         [Required(ErrorMessage = "Must input a username.")]
         [StringLength(15, MinimumLength = 5, ErrorMessage = "Username must be between 5-15 characters.")]
         public string Username { get; set; }
